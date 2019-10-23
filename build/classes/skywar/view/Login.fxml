@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="skywar.controller.LoginController">
+   <children>
+      <ImageView fitHeight="416.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../risorse/wordwar2.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar prefHeight="16.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="SKYWAR">
+            <items>
+              <MenuItem fx:id="menuItemInfo" mnemonicParsing="false" onAction="#info" text="Informazioni sul software" />
+              <MenuItem fx:id="menuItemExit" mnemonicParsing="false" onAction="#exit" text="Exit" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Text layoutX="207.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Use the arrow buttons  to move the canon&quot;">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="248.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Press the button  to shoot&quot;">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="249.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;HAVE NO MERCY&quot;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <Label layoutX="157.0" layoutY="269.0" text="NICKNAME:" textFill="#070707" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textField" layoutX="232.0" layoutY="264.0" prefHeight="28.0" prefWidth="135.0" />
+      <Button fx:id="continueButton" layoutX="266.0" layoutY="333.0" mnemonicParsing="false" onAction="#ButtonContinue" prefHeight="25.0" prefWidth="68.0" text="Continue">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

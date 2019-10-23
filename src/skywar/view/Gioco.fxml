@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="AP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="skywar.controller.GiocoController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="900.0">
+         <image>
+            <Image url="@../../risorse/realone.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Cannone" fitHeight="162.0" fitWidth="190.0" layoutX="-33.0" layoutY="571.0">
+         <image>
+            <Image url="@../../risorse/1504.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.4" specularConstant="2.0" specularExponent="40.0" surfaceScale="4.99">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="BLACK" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fx:id="fire" fitHeight="132.0" fitWidth="158.0" layoutX="319.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../risorse/fire.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Shoot" layoutX="538.0" layoutY="642.0" mnemonicParsing="false" onAction="#Spara" prefHeight="38.0" prefWidth="78.0" text="FIRE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Button fx:id="Down" layoutX="292.0" layoutY="652.0" mnemonicParsing="false" text="↓">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Button fx:id="Up" layoutX="256.0" layoutY="652.0" mnemonicParsing="false" text="↑">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Label layoutX="803.0" layoutY="616.0" text="COLPITI:" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="785.0" layoutY="634.0" prefHeight="17.0" prefWidth="66.0" text="PROIETTILI:" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="Colpiti" layoutX="853.0" layoutY="612.0" prefHeight="25.0" prefWidth="33.0" text=" " textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Label fx:id="Proiettili" layoutX="856.0" layoutY="630.0" prefHeight="25.0" prefWidth="27.0" textFill="#eeeaea">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Circle fx:id="Proiettile" fill="#0a0a0a" layoutX="166.0" layoutY="615.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <ImageView fx:id="Aereo1" fitHeight="90.0" fitWidth="117.0" layoutX="24.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Aereo2" fitHeight="108.0" fitWidth="157.0" layoutX="10.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="Aereo3" fitHeight="108.0" fitWidth="147.0" layoutX="14.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
+      <Circle fill="#141414" layoutX="166.0" layoutY="633.0" radius="9.0" stroke="#1e1d1d" strokeType="INSIDE">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Circle>
+      <Circle fill="#141414" layoutX="181.0" layoutY="624.0" radius="9.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Circle>
+      <Circle fill="#030303" layoutX="181.0" layoutY="642.0" radius="9.0" stroke="BLACK" strokeType="INSIDE">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Circle>
+      <Button fx:id="exit" layoutX="782.0" layoutY="655.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="54.0" text="Exit" textFill="#170101">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
